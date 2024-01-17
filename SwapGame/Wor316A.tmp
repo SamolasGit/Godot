@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdb5blgbkxd6e"]
+
+[ext_resource type="PackedScene" uid="uid://bj4ebpahxuoq6" path="res://Scenes/Player.tscn" id="1_lvoge"]
+[ext_resource type="Script" path="res://Scripts/Sections.gd" id="2_l2wef"]
+[ext_resource type="PackedScene" uid="uid://d3idr5c5w4fwf" path="res://Scenes/Section.tscn" id="3_ggnrr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_lvoge")]
+position = Vector2(0, -32)
+
+[node name="Sections" type="Node2D" parent="."]
+script = ExtResource("2_l2wef")
+
+[node name="StarterSection" parent="Sections" instance=ExtResource("3_ggnrr")]
